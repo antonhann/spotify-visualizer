@@ -1,9 +1,17 @@
+import { useEffect, useState } from "react"
+import { decemberData } from "../sampleData"
+import { Day } from "./Day"
 const DataVisualizer = () => {
   return (
-    <iframe
-        src='https://datawrapper.dwcdn.net/LJxK4/1/'
-        className='data'
-    />
+    <div
+      className="days"
+    >
+      {
+        decemberData.map((day) => {
+          return <Day day = {day}/>
+        })
+      }
+    </div>
   )
 }
 
