@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import { decemberData } from "../sampleData"
 import { Day } from "./Day"
 const DataVisualizer = () => {
@@ -7,8 +6,8 @@ const DataVisualizer = () => {
       className="days"
     >
       {
-        decemberData.map((day) => {
-          return <Day day = {day}/>
+        decemberData.map((day, index) => {
+          return <Day key = {index} day = {day} index = {index}/>
         })
       }
     </div>
